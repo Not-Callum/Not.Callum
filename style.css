@@ -1,0 +1,438 @@
+:root{
+  --background-colour: #183449;
+  --hover: #132a3b;
+  --text-colour: #8EE3EF;
+  --text-colour-darker: #7cbdd6;
+  --highlight-colour: #d12544;
+}
+
+*{
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  padding: 0;
+  margin: 0;
+  
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+  background-color: var(--background-colour);
+  height: 100%;
+  width: 100%;
+}
+
+header{
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  transition: top 0.3s;
+  background-color: var(--background-colour);
+  border-bottom: solid 2px var(--hover);
+  z-index: 999;
+}
+
+header nav{
+  width: 70%;
+  height: 100%;
+}
+
+header nav ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+header nav ul li{
+  float: left;
+  padding: 15px;
+  width:clamp(100px, 180px, 200px) ;
+}
+
+header nav ul li:hover > *{
+  background-color: var(--hover);
+  border-radius: 20px;
+}
+
+header nav ul li a{
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: var(--text-colour);
+  text-align: center;
+  font-size: 24px;
+}
+
+.page-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--highlight-colour);
+  width: 15%;
+  height: 100%;
+}
+
+.language{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 15%;
+}
+
+.language img{
+  height: 58px;
+  padding: 15px;
+  border-radius: 30px;
+}
+
+section{
+  width: 100%;
+  height: 100vh;
+  padding-right: 25%;
+  padding-left: 25%;
+}
+
+.about-me{
+  height: auto;
+  border-bottom: solid 2px var(--hover);
+}
+
+.about-me-container{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+  
+}
+
+#about-me-text{
+  width: 60%;
+  height: 60%;
+  padding-top: 5%;
+}
+
+#about-me-text h2{
+  width: 100%;
+  text-align: left;
+  font-size: 30px;
+  color: var(--highlight-colour);
+}
+
+#about-me-text h3{
+  width: 100%;
+  text-align: left;
+  font-size: 24px;
+  color: var(--text-colour-darker);
+}
+
+#about-me-text h1{
+  width: 100%;
+  text-align: left;
+  font-size: 60px;
+  font-weight: 900;
+  color: var(--text-colour);
+}
+
+#about-me-text p{
+  text-align: left;
+  text-wrap: balance;
+  font-size: 18px;
+  color: var(--text-colour-darker);
+}
+
+#about-me-text p span{
+  color: var(--text-colour);
+  font-weight:700;
+}
+
+#about-me-images{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  height: 60%;
+  padding: 2%;
+  padding-top: 10%;
+  
+}
+
+#about-me-images img{
+  display: block;
+  height: 250px;
+  width: 250px;
+  background-color: var(--hover);
+  border-radius: 15px;
+}
+
+#about-me-images #programming-languages{
+  width: 100%;
+  padding: 40px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 80px);
+  gap: 10px;
+}
+
+#about-me-images #programming-languages img{
+  width: 80px;
+  height: 80px;
+}
+
+.about-me-footer{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  margin-top: 75px;
+  margin-bottom: 50px;
+}
+
+.quick-links{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 70%;
+  height: 100px;
+}
+
+.quick-links button{
+  width: 150px;
+  height: 50px;
+  margin-right: 60px;
+  background-color: var(--text-colour);
+}
+
+.status-report{
+  display: flex;
+  align-items: center;
+  width: 20%;
+  height: 120px;
+  padding: 5px;
+  background-color: var(--hover);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.589);
+  border: solid 2px #0d1d29;
+}
+
+.status-report h2{
+  color: var(--text-colour-darker);
+  text-align: center;
+}
+
+.more-about-me{
+  display: flex;
+  width: 100%;
+  color: var(--text-colour-darker);
+}
+
+.more-about-me .brief-history{
+  width: 45%;
+  padding: 15px;
+  background-color: var(--hover);
+  border-radius: 15px;
+  margin-right: 10%;
+}
+
+.more-about-me .brief-history h2{
+  text-align: center;
+  font-weight: 700;
+}
+
+.more-about-me .brief-history p{
+  text-align: center;
+}
+
+.more-about-me .hobbies{
+  width: 45%;
+  padding: 15px;
+  background-color: var(--hover);
+  border-radius: 15px;
+}
+
+.more-about-me .hobbies h2{
+  text-align: center;
+  font-weight: 700;
+}
+
+.more-about-me .hobbies p{
+  text-align: center;
+}
+
+.more-about-me .hobbies ul{
+  text-align: center;
+  list-style: none;
+}
+
+.projects{
+  height: auto;
+  border-bottom: solid 2px var(--hover);
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.project-example{
+  display: flex;
+  height: 630px;
+  padding-top: 50px;
+  margin-bottom: 50px;
+}
+
+.project-title{
+  display: flex;
+  justify-content: center;
+  width: 15%;
+  height: 100%;
+  background-color: var(--hover);
+  padding: 10px;
+  border-radius: 15px;
+  margin-right: 10%;
+}
+
+.project-title h2{
+  position: sticky;
+  color: var(--highlight-colour);
+  font-size: 48px;
+  writing-mode: vertical-lr;
+  height: fit-content;
+  top: 100px;
+  z-index: 1;
+}
+
+.project-example-space{
+  display: flex;
+  align-items: center;
+  width: 85%;
+  height: 100%;
+  background-color: var(--hover);
+  border-radius: 20px;
+  padding: 2% 5% 2% 5%
+}
+
+.project-example-space .project-image{
+  width: 250px;
+  height: 250px;
+  background-color: black;
+  margin-right: 50px;
+  border-radius: 15px;
+}
+
+.project-example-space .project-image img{
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.project-example-space .project-text{
+  height: 70%;
+  width: 75%;
+  background-color: var(--background-colour);
+  border-radius: 15px;
+}
+
+@media only screen and (max-width: 1390px){
+
+  header .page-title{
+    width: 60%;
+    justify-content: right;
+  }
+
+  header .language{
+    width: 40%;
+  }
+
+  header nav{
+    display: none;
+  }
+
+  .about-me{
+    padding: 5%;
+  }
+  .about-me-container{
+    display: block;
+    align-items: start;
+    width: 100%;
+  }
+
+  #about-me-text{
+    display: inline-block;
+    width: 100%;
+    height: 40%;
+    padding: 0;
+  }
+
+  #about-me-text h2{
+    font-size: 18px;
+    text-align: center;
+  }
+
+  #about-me-text h1{
+    font-size: 24px;
+    text-align: center;
+  }
+
+  #about-me-text p{
+    font-size: 14px;
+    text-align: center;
+  }
+
+  #about-me-images{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    padding: 0;
+    margin-top: 30px;
+  }
+  
+  #about-me-text h3{
+    display: none;
+  }
+
+  #about-me-images #programming-languages{
+    width: 95%;
+    padding: 10px;
+  }
+
+  #about-me-images #programming-languages img{
+    width: 60px;
+    height: 60px;
+  }
+
+  .more-about-me{
+    display: block;
+  }
+
+  .more-about-me .brief-history{
+    width: 100%;
+  }
+
+  .more-about-me .hobbies{
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .status-report{
+    display: none;
+  }
+
+  .quick-links{
+    width: 100%;
+    justify-content: center;
+  }
+
+  .quick-links button{
+    margin-right: 0px;
+  }
+  
+}

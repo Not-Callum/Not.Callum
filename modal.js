@@ -31,17 +31,22 @@ function DisplayModal(image){
 }
 
 function closeModal(e){
-  console.log("something")
-  if (e == window.event){
-    e.cancelBubble = true;
+  try{
+    if (e == window.event){
+      e.cancelBubble = true;
+    }
+    if (e.stopPropagation){
+      e.stopPropagation();
+    }
+    const modalImage = document.getElementById("the-modal-image");
+    const modalButton = document.getElementById("close");
+  
+    modalButton.remove();
+    modalImage.remove();
+    document.getElementById("images-modal-container").style.display = "none";
   }
-  if (e.stopPropagation){
-    e.stopPropagation();
+  catch{
+    console.log("No modal to close.")
   }
-  const modalImage = document.getElementById("the-modal-image");
-  const modalButton = document.getElementById("close");
-
-  modalButton.remove();
-  modalImage.remove();
-  document.getElementById("images-modal-container").style.display = "none";
+  
 }

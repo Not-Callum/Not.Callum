@@ -1,9 +1,9 @@
 :root{
-  --background-colour: #183449;
-  --hover: #132a3b;
-  --text-colour: #8EE3EF;
-  --text-colour-darker: #7cbdd6;
-  --highlight-colour: #d12544;
+  --background-colour: #0f2f47;
+  --hover: #0b263b;
+  --text-colour: #65deee;
+  --text-colour-darker: #5ab3d6;
+  --highlight-colour: #f00e38;
   --highlight-colour-hover: #ff0101;
 }
 
@@ -310,7 +310,7 @@ section{
   background-color: var(--hover);
   padding: 10px;
   border-radius: 15px;
-  margin-right: 10%;
+  margin-right: 4%;
 }
 
 .project-title h2{
@@ -409,6 +409,10 @@ section{
   aspect-ratio: 16/9;
 }
 
+.project-showcase img:hover{
+  cursor: pointer;
+}
+
 .images-modal-container{
   display: none;
   justify-content: center;
@@ -442,6 +446,10 @@ section{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
+.images-modal-container .images-modal button:hover{
+  cursor: pointer;
+}
+
 .images-modal-container .images-modal img{
   width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
@@ -450,6 +458,32 @@ section{
 
 #cowboy-example{
   border-bottom: 0;
+}
+
+.skills{
+  height: fit-content;
+  width: 100%;
+  color: var(--text-colour);
+  padding-bottom: 1em;
+  border-bottom: 2px solid var(--hover);
+}
+
+.skills .skills-section-title{
+  font-size: 36px;
+  padding-top: 1em;
+  margin-bottom: 1em;
+  text-decoration: underline;
+}
+
+.hard-skill-example, .soft-skill-example{
+  background-color: var(--hover);
+  border-radius: 15px;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+.hard-skill-title, .soft-skill-title{
+  font-size: 24px;
 }
 
 
@@ -589,5 +623,13 @@ section{
 
   .project-showcase{
     display: none;
+  }
+
+  .images-modal-container{
+    display: none;
+  }
+
+  .skills{
+    padding: 1em;
   }
 }

@@ -1,6 +1,8 @@
 var showcaseImages = document.getElementsByClassName("showcase-images");
 
+var modal = window.matchMedia("(max-width: 1390px)")
 
+modal.addEventListener("change", function(){ closeModal(event)})
 
 function DisplayModal(image){
   const modalDiv = document.getElementById("images-modal")

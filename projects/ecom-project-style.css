@@ -1,0 +1,90 @@
+@import '/ProperPortfolio-o-o/constants.css';
+
+*{
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  padding: 0;
+  margin: 0;
+  
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+@keyframes navbar-colour-transition{
+  from{color:#306199;}
+  to{color:var(--text-colour)}
+}
+
+@keyframes navbar-colour-transition-reverse{
+  from{color:var(--text-colour)}
+  to{color:#306199;}
+}
+
+section{
+  height: 100vh;
+  width: 100%;
+  background: var(--background-colour);
+  padding: 4em;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.title-container{
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+  margin: 1em;
+  color: var(--text-colour);
+  z-index: 50;
+}
+
+.title-container h1{
+  font-size: 60px;
+}
+
+header{
+  display: flex;
+  padding: 20px;
+  margin-top: 4em;
+  justify-content: left;
+  position: fixed;
+  width: 20%;
+  height: fit-content;
+  right: 0;
+}
+
+header ul{
+  list-style: none;
+  width: 50%;
+} 
+
+header ul li > a{
+  color: #306199;
+  font-weight: 700px;
+  font-size: 24px;
+}
+
+header ul li{
+  margin: 1em;
+}
+
+header ul li:hover > a{
+  cursor: pointer;
+  animation: navbar-colour-transition 0.5s;
+}
+
+header ul li:not(:hover) > a{
+animation: navbar-colour-transition-reverse 0.8s
+}
+
+header ul li a{
+  text-decoration: none;
+  
+}

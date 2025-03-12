@@ -1,11 +1,4 @@
-:root{
-  --background-colour: #0f2f47;
-  --hover: #0b263b;
-  --text-colour: #65deee;
-  --text-colour-darker: #5ab3d6;
-  --highlight-colour: #f00e38;
-  --highlight-colour-hover: #ff0101;
-}
+@import './constants.css';
 
 @keyframes loading{
   from {opacity: 0;}
